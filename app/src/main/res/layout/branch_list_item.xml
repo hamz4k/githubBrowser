@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/repo_item_height"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="@dimen/value_16dp">
+
+    <ImageView
+        android:id="@+id/branch_ic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_forks"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/branch_name_text"
+        style="@style/AppTheme.TextAppearance.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/value_8dp"
+        app:layout_constraintBottom_toTopOf="@id/branch_url_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/branch_ic"
+        app:layout_constraintTop_toTopOf="@id/branch_ic" tools:text="Name"/>
+
+    <TextView
+        android:id="@+id/branch_url_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/value_8dp"
+        app:layout_constraintEnd_toEndOf="@+id/branch_name_text"
+        app:layout_constraintStart_toStartOf="@+id/branch_name_text"
+        app:layout_constraintTop_toBottomOf="@id/branch_name_text" tools:text="Branch url"/>
+
+
+</android.support.constraint.ConstraintLayout>

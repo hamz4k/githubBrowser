@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hklouch.githubrepos4cs"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="com.hklouch.app.GithubRepos4csApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.hklouch.ui.project.browse.BrowseProjectsActivity"
+                  android:label="@string/browser_activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.hklouch.ui.project.search.SearchActivity"
+                  android:label="@string/search_activity_title">
+        </activity>
+
+        <activity android:name="com.hklouch.ui.project.detail.ProjectDetailActivity"
+                  android:label="@string/project_detail_activity_title">
+        </activity>
+
+        <activity android:name="com.hklouch.ui.branch.BranchActivity"
+                  android:label="@string/branches_activity_title"/>
+
+        <activity android:name="com.hklouch.ui.contributor.ContributorActivity"
+                  android:label="@string/contributors_activity_title"/>
+
+        <activity android:name="com.hklouch.ui.issue.IssueActivity"
+                  android:label="@string/issues_activity_title"/>
+
+        <activity android:name="com.hklouch.ui.pull.PullActivity"
+                  android:label="@string/pulls_activity_title"/>
+    </application>
+
+</manifest>
